@@ -1,0 +1,34 @@
+{\rtf1\fs24
+\pard\qc
+Effet de l'éducation sur les salaires\par
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx1872\clbrdrt\brdrs\cellx3312\clbrdrt\brdrs\cellx4752
+\ql \cell\qc (1)\cell\qc (2)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752
+\ql \cell\qc MCO\cell\qc DMC\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752
+\ql VARIABLES\cell\qc logwage\cell\qc logwage\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx1872\cellx3312\cellx4752
+\ql \cell\qc \cell\qc \cell\row
+\ql educ\cell\qc 0.071***\cell\qc 0.125**\cell\row
+\ql \cell\qc (0.003)\cell\qc (0.049)\cell\row
+\ql exper\cell\qc 0.035***\cell\qc 0.057***\cell\row
+\ql \cell\qc (0.002)\cell\qc (0.020)\cell\row
+\ql black\cell\qc -0.165***\cell\qc -0.114**\cell\row
+\ql \cell\qc (0.018)\cell\qc (0.050)\cell\row
+\ql south\cell\qc -0.132***\cell\qc -0.113***\cell\row
+\ql \cell\qc (0.015)\cell\qc (0.023)\cell\row
+\ql married\cell\qc 0.151***\cell\qc 0.134***\cell\row
+\ql \cell\qc (0.015)\cell\qc (0.023)\cell\row
+\ql smsa\cell\qc 0.174***\cell\qc 0.145***\cell\row
+\ql \cell\qc (0.015)\cell\qc (0.031)\cell\row
+\ql Constant\cell\qc 4.866***\cell\qc 3.971***\cell\row
+\ql \cell\qc (0.062)\cell\qc (0.818)\cell\row
+\ql \cell\qc \cell\qc \cell\row
+\ql Observations\cell\qc 3,010\cell\qc 3,010\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx1872\clbrdrb\brdrs\cellx3312\clbrdrb\brdrs\cellx4752
+\ql R-squared\cell\qc 0.301\cell\qc 0.245\cell\row
+\pard\qc
+Standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

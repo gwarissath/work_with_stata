@@ -1,0 +1,1018 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}D:\MES CERTIFICATIONS\stata\variable_intrumentale\result.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Jan 2026, 10:47:46
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. use database_college.dta, clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. describe
+
+{txt}Contains data from {res}database_college.dta
+{txt}  obs:{res}         3,010                          
+{txt} vars:{res}             9                          22 Dec 2021 18:09
+{txt} size:{res}        45,150                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:id             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Individual identifier{p_end}
+{p 0 48}{bind:wage           }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Wages{p_end}
+{p 0 48}{bind:educ           }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:exper          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}{p_end}
+{p 0 48}{bind:black          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Race: Black{p_end}
+{p 0 48}{bind:south          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}In the southern United States{p_end}
+{p 0 48}{bind:married        }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Is married{p_end}
+{p 0 48}{bind:smsa           }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}In a Standard Metropolitan Statistical Area (urban){p_end}
+{p 0 48}{bind:nearc4         }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}There is a four-year college in the county{p_end}
+{txt}{hline}
+Sorted by: 
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. summarize
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 10}id {c |}{res}      3,010      1505.5    869.0565          1       3010
+{txt}{space 8}wage {c |}{res}      3,010    577.2824    262.9583   99.99996       2404
+{txt}{space 8}educ {c |}{res}      3,010    13.26346    2.676913          1         18
+{txt}{space 7}exper {c |}{res}      3,010    8.856146    4.141672          0         23
+{txt}{space 7}black {c |}{res}      3,010    .2335548    .4231624          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 7}south {c |}{res}      3,010    .4036545    .4907113          0          1
+{txt}{space 5}married {c |}{res}      3,010    .7122924    .4527693          0          1
+{txt}{space 8}smsa {c |}{res}      3,010    .7129568    .4524571          0          1
+{txt}{space 6}nearc4 {c |}{res}      3,010    .6820598    .4657535          0          1
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. codebook
+
+{txt}{hline}
+{res}id{right:Individual identifier}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}float{txt})
+
+{col 18}range:  [{res}1{txt},{res}3010{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}3,010{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 19}mean:{res}{col 26}  1505.5
+{txt}{col 15}std. dev:{res}{col 26} 869.056
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}   301.5{col 37}     753{col 47}  1505.5{col 57}    2258{col 67}  2709.5
+
+{txt}{hline}
+{res}wage{right:Wages}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}float{txt})
+
+{col 18}range:  [{res}99.99996{txt},{res}2403.9998{txt}]{col 55}units:  {res}.00001
+{col 10}{txt}unique values:  {res}755{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 19}mean:{res}{col 26} 577.282
+{txt}{col 15}std. dev:{res}{col 26} 262.958
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}     291{col 37}     394{col 47}   537.5{col 57}     709{col 67}     894
+
+{txt}{hline}
+{res}educ{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}1{txt},{res}18{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}18{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 19}mean:{res}{col 26} 13.2635
+{txt}{col 15}std. dev:{res}{col 26} 2.67691
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}      10{col 37}      12{col 47}      13{col 57}      16{col 67}      17
+
+{txt}{hline}
+{res}exper{right:(unlabeled)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}23{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}24{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 19}mean:{res}{col 26} 8.85615
+{txt}{col 15}std. dev:{res}{col 26} 4.14167
+
+{txt}{col 12}percentiles:{col 32}10%{col 42}25%{col 52}50%{col 62}75%{col 72}90%
+{res}{col 27}       4{col 37}       6{col 47}       8{col 57}      11{col 67}      15
+
+{txt}{hline}
+{res}black{right:Race: Black}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     2,307{col 33}0
+{col 21}       703{col 33}1
+
+{txt}{hline}
+{res}south{right:In the southern United States}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}     1,795{col 33}0
+{col 21}     1,215{col 33}1
+
+{txt}{hline}
+{res}married{right:Is married}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       866{col 33}0
+{col 21}     2,144{col 33}1
+
+{txt}{hline}
+{res}smsa{right:In a Standard Metropolitan Statistical Area (urban)}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       864{col 33}0
+{col 21}     2,146{col 33}1
+
+{txt}{hline}
+{res}nearc4{right:There is a four-year college in the county}
+{txt}{hline}
+
+{col 19}type:  numeric ({res}byte{txt})
+
+{col 18}range:  [{res}0{txt},{res}1{txt}]{col 55}units:  {res}1
+{col 10}{txt}unique values:  {res}2{col 51}{txt}missing .:  {res}0{txt}/{res}3,010
+
+{txt}{col 13}tabulation:  Freq.  Value
+{col 21}{res}       957{col 33}0
+{col 21}     2,053{col 33}1
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. label variable educ "Years of education"
+{txt}
+{com}. label variable exper "Years of work experience"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. sum educ exper black south married smsa nearc4 logwage
+{err}variable {bf}logwage{sf} not found
+{txt}{search r(111), local:r(111);}
+
+end of do-file
+
+{search r(111), local:r(111);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. gen logwage= log(wage)// création de la variable logarithme du salaire (logwage)
+{err}unknown function ()
+{txt}{search r(133), local:r(133);}
+
+end of do-file
+
+{search r(133), local:r(133);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. describe //les variables educ et exper n'ont pas de label
+
+{txt}Contains data from {res}database_college.dta
+{txt}  obs:{res}         3,010                          
+{txt} vars:{res}             9                          22 Dec 2021 18:09
+{txt} size:{res}        45,150                          
+{txt}{hline}
+              storage   display    value
+variable name   type    format     label      variable label
+{hline}
+{p 0 48}{res}{bind:id             }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Individual identifier{p_end}
+{p 0 48}{bind:wage           }{txt}{bind: float   }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Wages{p_end}
+{p 0 48}{bind:educ           }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Years of education{p_end}
+{p 0 48}{bind:exper          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Years of work experience{p_end}
+{p 0 48}{bind:black          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Race: Black{p_end}
+{p 0 48}{bind:south          }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}In the southern United States{p_end}
+{p 0 48}{bind:married        }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}Is married{p_end}
+{p 0 48}{bind:smsa           }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}In a Standard Metropolitan Statistical Area (urban){p_end}
+{p 0 48}{bind:nearc4         }{txt}{bind: byte    }{bind:{txt}%9.0g     }{space 1}{bind:         }{bind:  }{res}{res}There is a four-year college in the county{p_end}
+{txt}{hline}
+Sorted by: 
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. cd "D:\MES CERTIFICATIONS\stata\variable_intrumentale"
+{res}D:\MES CERTIFICATIONS\stata\variable_intrumentale
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. use database_college.dta, clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. label variable educ "Years of education"
+{txt}
+{com}. label variable exper "Years of work experience"
+{txt}
+{com}. summarize
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 10}id {c |}{res}      3,010      1505.5    869.0565          1       3010
+{txt}{space 8}wage {c |}{res}      3,010    577.2824    262.9583   99.99996       2404
+{txt}{space 8}educ {c |}{res}      3,010    13.26346    2.676913          1         18
+{txt}{space 7}exper {c |}{res}      3,010    8.856146    4.141672          0         23
+{txt}{space 7}black {c |}{res}      3,010    .2335548    .4231624          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 7}south {c |}{res}      3,010    .4036545    .4907113          0          1
+{txt}{space 5}married {c |}{res}      3,010    .7122924    .4527693          0          1
+{txt}{space 8}smsa {c |}{res}      3,010    .7129568    .4524571          0          1
+{txt}{space 6}nearc4 {c |}{res}      3,010    .6820598    .4657535          0          1
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. gen logwage= log(wage)// création de la variable logarithme du salaire (logwage)
+{err}unknown function ()
+{txt}{search r(133), local:r(133);}
+
+end of do-file
+
+{search r(133), local:r(133);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. gen logwage= log(wage)// création de la variable logarithme du salaire (logwage)
+{err}unknown function ()
+{txt}{search r(133), local:r(133);}
+
+end of do-file
+
+{search r(133), local:r(133);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. gen logwage= log(wage) // création de la variable logarithme du salaire (logwage)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. label variable logwage "Log wages" //labelisons cette nouvelle variable créée
+{txt}
+{com}. drop wage //Supression de l'ancienne variable salaire (wage)
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. sum educ exper black south married smsa nearc4 logwage
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}educ {c |}{res}      3,010    13.26346    2.676913          1         18
+{txt}{space 7}exper {c |}{res}      3,010    8.856146    4.141672          0         23
+{txt}{space 7}black {c |}{res}      3,010    .2335548    .4231624          0          1
+{txt}{space 7}south {c |}{res}      3,010    .4036545    .4907113          0          1
+{txt}{space 5}married {c |}{res}      3,010    .7122924    .4527693          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 8}smsa {c |}{res}      3,010    .7129568    .4524571          0          1
+{txt}{space 6}nearc4 {c |}{res}      3,010    .6820598    .4657535          0          1
+{txt}{space 5}logwage {c |}{res}      3,010    6.261832    .4437976    4.60517   7.784889
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. tabstat educ exper , stats(mean sd min max n) columns(statistics) separator(0)
+{err}option {bf:separator()} incorrectly specified
+{txt}{search r(198), local:r(198);}
+
+{com}. 
+. 
+. ds
+{txt}{col 1}id{col 10}educ{col 19}exper{col 28}black{col 37}south{col 46}married{col 55}smsa{col 64}nearc4{col 73}logwage
+
+{com}. tabstat  educ     exper    black    south, ///
+{err}option {bf:/} not allowed
+{txt}{search r(198), local:r(198);}
+
+{com}.     by(married) ///
+{err}: required
+{txt}{search r(100), local:r(100);}
+
+{com}.     stats(mean sd min max n) ///
+{err}command {bf}stats{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+{com}.     columns(statistics) ///
+{err}command {bf}columns{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+{com}.     separator(0)
+{err}command {bf}separator{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+{com}. tabstat  educ     exper    black    south
+
+{txt}   stats {...}
+{c |}{...}
+      educ     exper     black     south
+{hline 9}{c +}{hline 40}
+{ralign 8:mean} {...}
+{c |}{...}
+ {res} 13.26346  8.856146  .2335548  .4036545
+{txt}{hline 9}{c BT}{hline 40}
+
+{com}. ds, has(vallabel)
+
+. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. sum educ exper black south married smsa nearc4 logwage
+
+{txt}    Variable {c |}        Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 8}educ {c |}{res}      3,010    13.26346    2.676913          1         18
+{txt}{space 7}exper {c |}{res}      3,010    8.856146    4.141672          0         23
+{txt}{space 7}black {c |}{res}      3,010    .2335548    .4231624          0          1
+{txt}{space 7}south {c |}{res}      3,010    .4036545    .4907113          0          1
+{txt}{space 5}married {c |}{res}      3,010    .7122924    .4527693          0          1
+{txt}{hline 13}{c +}{hline 57}
+{space 8}smsa {c |}{res}      3,010    .7129568    .4524571          0          1
+{txt}{space 6}nearc4 {c |}{res}      3,010    .6820598    .4657535          0          1
+{txt}{space 5}logwage {c |}{res}      3,010    6.261832    .4437976    4.60517   7.784889
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. asdoc sum educ exper black south married smsa nearc4 logwage, separator(0) ,save(statdes.doc)
+{err}command {bf}asdoc{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. ssc install asdoc
+{txt}checking {hilite:asdoc} consistency and verifying not already installed...
+installing into c:\ado\plus\...
+installation complete.
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. asdoc sum educ exper black south married smsa nearc4 logwage, separator(0) ,save(statdes.doc)
+{res}
+{txt}{p 0 0 2}Descriptive Statistics{p_end}
+
+{space 0}{hline 13}{c  TT}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}
+{space 0}{space 0}{ralign 12:}{space 1}{c |}{space 1}{ralign 9:Obs}{space 1}{space 1}{ralign 9:Mean}{space 1}{space 1}{ralign 9:Std_Dev}{space 1}{space 1}{ralign 9:Min}{space 1}{space 1}{ralign 9:Max}{space 1}{space 1}{ralign 9:p1}{space 1}{space 1}{ralign 9:p99}{space 1}
+{space 0}{hline 13}{c   +}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}
+{space 0}{space 0}{ralign 12:educ}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:   13.263}}}{space 1}{space 1}{ralign 9:{res:{sf:    2.677}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:       18}}}{space 1}{space 1}{ralign 9:{res:{sf:        6}}}{space 1}{space 1}{ralign 9:{res:{sf:       18}}}{space 1}
+{space 0}{space 0}{ralign 12:exper}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:    8.856}}}{space 1}{space 1}{ralign 9:{res:{sf:    4.142}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:       23}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:       19}}}{space 1}
+{space 0}{space 0}{ralign 12:black}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:     .234}}}{space 1}{space 1}{ralign 9:{res:{sf:     .423}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}
+{space 0}{space 0}{ralign 12:south}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:     .404}}}{space 1}{space 1}{ralign 9:{res:{sf:     .491}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}
+{space 0}{space 0}{ralign 12:married}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:     .712}}}{space 1}{space 1}{ralign 9:{res:{sf:     .453}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}
+{space 0}{space 0}{ralign 12:smsa}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:     .713}}}{space 1}{space 1}{ralign 9:{res:{sf:     .452}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}
+{space 0}{space 0}{ralign 12:nearc4}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:     .682}}}{space 1}{space 1}{ralign 9:{res:{sf:     .466}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}{space 1}{ralign 9:{res:{sf:        0}}}{space 1}{space 1}{ralign 9:{res:{sf:        1}}}{space 1}
+{space 0}{space 0}{ralign 12:logwage}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     3010}}}{space 1}{space 1}{ralign 9:{res:{sf:    6.262}}}{space 1}{space 1}{ralign 9:{res:{sf:     .444}}}{space 1}{space 1}{ralign 9:{res:{sf:    4.605}}}{space 1}{space 1}{ralign 9:{res:{sf:    7.785}}}{space 1}{space 1}{ralign 9:{res:{sf:    5.236}}}{space 1}{space 1}{ralign 9:{res:{sf:    7.274}}}{space 1}
+{space 0}{hline 13}{c  BT}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}{hline 11}
+
+{space 0}{hline 13}{c  TT}{hline 11}{hline 11}
+{space 0}{space 0}{ralign 12:}{space 1}{c |}{space 1}{ralign 9:Skew}{space 1}{space 1}{ralign 9:Kurt}{space 1}
+{space 0}{hline 13}{c   +}{hline 11}{hline 11}
+{space 0}{space 0}{ralign 12:educ}{space 1}{c |}{space 1}{ralign 9:{res:{sf:    -.232}}}{space 1}{space 1}{ralign 9:{res:{sf:    3.281}}}{space 1}
+{space 0}{space 0}{ralign 12:exper}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     .495}}}{space 1}{space 1}{ralign 9:{res:{sf:    2.815}}}{space 1}
+{space 0}{space 0}{ralign 12:black}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     1.26}}}{space 1}{space 1}{ralign 9:{res:{sf:    2.586}}}{space 1}
+{space 0}{space 0}{ralign 12:south}{space 1}{c |}{space 1}{ralign 9:{res:{sf:     .393}}}{space 1}{space 1}{ralign 9:{res:{sf:    1.154}}}{space 1}
+{space 0}{space 0}{ralign 12:married}{space 1}{c |}{space 1}{ralign 9:{res:{sf:    -.938}}}{space 1}{space 1}{ralign 9:{res:{sf:     1.88}}}{space 1}
+{space 0}{space 0}{ralign 12:smsa}{space 1}{c |}{space 1}{ralign 9:{res:{sf:    -.941}}}{space 1}{space 1}{ralign 9:{res:{sf:    1.886}}}{space 1}
+{space 0}{space 0}{ralign 12:nearc4}{space 1}{c |}{space 1}{ralign 9:{res:{sf:    -.782}}}{space 1}{space 1}{ralign 9:{res:{sf:    1.611}}}{space 1}
+{space 0}{space 0}{ralign 12:logwage}{space 1}{c |}{space 1}{ralign 9:{res:{sf:    -.156}}}{space 1}{space 1}{ralign 9:{res:{sf:    3.164}}}{space 1}
+{space 0}{hline 13}{c  BT}{hline 11}{hline 11}
+{res}Click to Open File:  {browse "Myfile.doc"}
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. twoway (scatter logwage educ) (lfit logwage educ)
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. //regression MCO avec une seule variable eplicative
+. reg logwage educ
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(1, 3008)      = {res}   329.54
+{txt}       Model {c |} {res} 58.5153536         1  58.5153536   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 534.126258     3,008   .17756857   {txt}R-squared       ={res}    0.0987
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0984
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .42139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0520942{col 26}{space 2} .0028697{col 37}{space 1}   18.15{col 46}{space 3}0.000{col 54}{space 4} .0464674{col 67}{space 3}  .057721
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.570883{col 26}{space 2} .0388295{col 37}{space 1}  143.47{col 46}{space 3}0.000{col 54}{space 4} 5.494748{col 67}{space 3} 5.647017
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. //exporter les resultats
+. asdoc reg logwage educ, save(reg.doc) 
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(1, 3008)      = {res}   329.54
+{txt}       Model {c |} {res} 58.5153536         1  58.5153536   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 534.126258     3,008   .17756857   {txt}R-squared       ={res}    0.0987
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.0984
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .42139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0520942{col 26}{space 2} .0028697{col 37}{space 1}   18.15{col 46}{space 3}0.000{col 54}{space 4} .0464674{col 67}{space 3}  .057721
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.570883{col 26}{space 2} .0388295{col 37}{space 1}  143.47{col 46}{space 3}0.000{col 54}{space 4} 5.494748{col 67}{space 3} 5.647017
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}(note: file reg.doc not found)
+Click to Open File:  {browse "reg.doc"}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. asdoc reg logwage educ exper, nested  append
+{res}
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(2, 3007)      = {res}   333.00
+{txt}       Model {c |} {res} 107.459131         2  53.7295655   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  485.18248     3,007  .161351008   {txt}R-squared       ={res}    0.1813
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.1808
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .40169
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2}  .093168{col 26}{space 2} .0036118{col 37}{space 1}   25.80{col 46}{space 3}0.000{col 54}{space 4} .0860863{col 67}{space 3} .1002498
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0406574{col 26}{space 2} .0023344{col 37}{space 1}   17.42{col 46}{space 3}0.000{col 54}{space 4} .0360802{col 67}{space 3} .0452346
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.666035{col 26}{space 2}   .06379{col 37}{space 1}   73.15{col 46}{space 3}0.000{col 54}{space 4} 4.540958{col 67}{space 3} 4.791111
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Click to Open File:  {browse "reg.doc"}
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. asdoc reg logwage educ exper black, nested append
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(3, 3006)      = {res}   293.56
+{txt}       Model {c |} {res} 134.286646         3  44.7622155   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 458.354965     3,006  .152480028   {txt}R-squared       ={res}    0.2266
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2258
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .39049
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2}  .081757{col 26}{space 2} .0036149{col 37}{space 1}   22.62{col 46}{space 3}0.000{col 54}{space 4}  .074669{col 67}{space 3}  .088845
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0391413{col 26}{space 2} .0022722{col 37}{space 1}   17.23{col 46}{space 3}0.000{col 54}{space 4} .0346861{col 67}{space 3} .0435966
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.2319965{col 26}{space 2} .0174903{col 37}{space 1}  -13.26{col 46}{space 3}0.000{col 54}{space 4}-.2662908{col 67}{space 3}-.1977023
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.884994{col 26}{space 2} .0641712{col 37}{space 1}   76.12{col 46}{space 3}0.000{col 54}{space 4}  4.75917{col 67}{space 3} 5.010818
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Click to Open File:  {browse "reg.doc"}
+{txt}
+{com}. asdoc reg logwage educ exper black south, nested append
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(4, 3005)      = {res}   253.50
+{txt}       Model {c |} {res} 149.522762         4  37.3806905   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 443.118849     3,005  .147460516   {txt}R-squared       ={res}    0.2523
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2513
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .38401
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0781126{col 26}{space 2}  .003573{col 37}{space 1}   21.86{col 46}{space 3}0.000{col 54}{space 4} .0711069{col 67}{space 3} .0851183
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0388675{col 26}{space 2} .0022347{col 37}{space 1}   17.39{col 46}{space 3}0.000{col 54}{space 4} .0344859{col 67}{space 3} .0432491
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1763258{col 26}{space 2} .0180509{col 37}{space 1}   -9.77{col 46}{space 3}0.000{col 54}{space 4}-.2117193{col 67}{space 3}-.1409324
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.1554243{col 26}{space 2} .0152904{col 37}{space 1}  -10.16{col 46}{space 3}0.000{col 54}{space 4}-.1854051{col 67}{space 3}-.1254435
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.985492{col 26}{space 2} .0638759{col 37}{space 1}   78.05{col 46}{space 3}0.000{col 54}{space 4} 4.860247{col 67}{space 3} 5.110737
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Click to Open File:  {browse "reg.doc"}
+{txt}
+{com}. asdoc reg logwage educ exper black south married, nested append
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(5, 3004)      = {res}   224.07
+{txt}       Model {c |} {res} 160.984926         5  32.1969852   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 431.656685     3,004   .14369397   {txt}R-squared       ={res}    0.2716
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2704
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .37907
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0759866{col 26}{space 2} .0035351{col 37}{space 1}   21.50{col 46}{space 3}0.000{col 54}{space 4} .0690553{col 67}{space 3}  .082918
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0348539{col 26}{space 2} .0022512{col 37}{space 1}   15.48{col 46}{space 3}0.000{col 54}{space 4} .0304398{col 67}{space 3}  .039268
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1545695{col 26}{space 2} .0179846{col 37}{space 1}   -8.59{col 46}{space 3}0.000{col 54}{space 4} -.189833{col 67}{space 3} -.119306
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.1597135{col 26}{space 2} .0151015{col 37}{space 1}  -10.58{col 46}{space 3}0.000{col 54}{space 4}-.1893239{col 67}{space 3}-.1301032
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1407131{col 26}{space 2} .0157551{col 37}{space 1}    8.93{col 46}{space 3}0.000{col 54}{space 4} .1098213{col 67}{space 3} .1716049
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.945656{col 26}{space 2} .0632124{col 37}{space 1}   78.24{col 46}{space 3}0.000{col 54}{space 4} 4.821712{col 67}{space 3}   5.0696
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Click to Open File:  {browse "reg.doc"}
+{txt}
+{com}. asdoc reg logwage educ exper black south married smsa, nested append
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(6, 3003)      = {res}   215.60
+{txt}       Model {c |} {res} 178.427928         6  29.7379881   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 414.213683     3,003  .137933294   {txt}R-squared       ={res}    0.3011
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2997
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .37139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0712755{col 26}{space 2} .0034887{col 37}{space 1}   20.43{col 46}{space 3}0.000{col 54}{space 4}  .064435{col 67}{space 3}  .078116
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0350196{col 26}{space 2} .0022057{col 37}{space 1}   15.88{col 46}{space 3}0.000{col 54}{space 4} .0306948{col 67}{space 3} .0393445
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1654847{col 26}{space 2} .0176472{col 37}{space 1}   -9.38{col 46}{space 3}0.000{col 54}{space 4}-.2000864{col 67}{space 3}-.1308829
+{txt}{space 7}south {c |}{col 14}{res}{space 2} -.132175{col 26}{space 2}  .014997{col 37}{space 1}   -8.81{col 46}{space 3}0.000{col 54}{space 4}-.1615805{col 67}{space 3}-.1027696
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1514184{col 26}{space 2} .0154654{col 37}{space 1}    9.79{col 46}{space 3}0.000{col 54}{space 4} .1210946{col 67}{space 3} .1817421
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2}   .17407{col 26}{space 2} .0154792{col 37}{space 1}   11.25{col 46}{space 3}0.000{col 54}{space 4} .1437191{col 67}{space 3} .2044208
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.866378{col 26}{space 2} .0623323{col 37}{space 1}   78.07{col 46}{space 3}0.000{col 54}{space 4}  4.74416{col 67}{space 3} 4.988597
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}Click to Open File:  {browse "reg.doc"}
+{txt}
+{com}. 
+. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. quietly reg logwage educ exper black south married smsa
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. predict residmco, residuals
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. sktest residmco                 
+{res}
+{col 21}{txt}Skewness/Kurtosis tests for Normality
+{col 59}{hline 6} joint {hline 6}
+{col 5}Variable {c |}        Obs  Pr(Skewness)  Pr(Kurtosis) adj chi2(2)   Prob>chi2
+{hline 13}{c +}{hline 63}
+    residmco {c |}{res}{col 16}     3,010{col 31}0.0000{col 45}0.0000{col 54}    45.82{col 72}0.0000
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. twoway (hist residmco, percent color(gs12)) ///
+>        (kdensity residmco, lcolor(red) lwidth(medthick))
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. twoway (hist residmco, percent color(gs12)) ///
+>        (kdensity residmco, lcolor(red) lwidth(medthick))
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. qui reg logwage educ exper black south married smsa
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat hettest, iid
+
+{txt}Breusch-Pagan / Cook-Weisberg test for heteroskedasticity 
+         Ho: Constant variance
+{p 9 20}Variables: fitted values of logwage
+
+{col 10}chi2({res}1{txt}){col 23}={res}     0.18
+{txt}{col 10}Prob > chi2{col 23}={res}   0.6712
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat imtest, white
+
+{txt}White's test for Ho: homoskedasticity
+         against Ha: unrestricted heteroskedasticity
+
+{col 10}chi2({res}23{txt}){col 23}= {res}    45.35
+{col 10}{txt}Prob > chi2  = {res}   0.0036
+
+{txt}Cameron & Trivedi's decomposition of IM-test
+
+{hline 21}{c TT}{hline 29}
+{ralign 20:Source} {c |}       chi2     df      p
+{hline 21}{c +}{hline 29}
+{ralign 20:Heteroskedasticity} {c |}{res}      45.35     23    0.0036
+{txt}{ralign 20:Skewness} {c |}{res}      17.25      6    0.0084
+{txt}{ralign 20:Kurtosis} {c |}{res}      12.22      1    0.0005
+{txt}{hline 21}{c +}{hline 29}
+{ralign 20:Total} {c |}{res}      74.82     30    0.0000
+{txt}{hline 21}{c BT}{hline 29}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. a revoir
+{err}command {bf}a{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. reg logwage educ exper black south married smsa, ro
+
+{txt}Linear regression                               Number of obs     = {res}     3,010
+                                                {txt}F(6, 3003)        =  {res}   227.58
+                                                {txt}Prob > F          = {res}    0.0000
+                                                {txt}R-squared         = {res}    0.3011
+                                                {txt}Root MSE          =    {res} .37139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0712755{col 26}{space 2} .0036224{col 37}{space 1}   19.68{col 46}{space 3}0.000{col 54}{space 4} .0641729{col 67}{space 3}  .078378
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0350196{col 26}{space 2} .0022603{col 37}{space 1}   15.49{col 46}{space 3}0.000{col 54}{space 4} .0305877{col 67}{space 3} .0394516
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1654847{col 26}{space 2} .0174567{col 37}{space 1}   -9.48{col 46}{space 3}0.000{col 54}{space 4}-.1997129{col 67}{space 3}-.1312564
+{txt}{space 7}south {c |}{col 14}{res}{space 2} -.132175{col 26}{space 2}   .01523{col 37}{space 1}   -8.68{col 46}{space 3}0.000{col 54}{space 4}-.1620373{col 67}{space 3}-.1023127
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1514184{col 26}{space 2} .0162965{col 37}{space 1}    9.29{col 46}{space 3}0.000{col 54}{space 4} .1194649{col 67}{space 3} .1833718
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2}   .17407{col 26}{space 2} .0151251{col 37}{space 1}   11.51{col 46}{space 3}0.000{col 54}{space 4} .1444133{col 67}{space 3} .2037266
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.866378{col 26}{space 2} .0650309{col 37}{space 1}   74.83{col 46}{space 3}0.000{col 54}{space 4} 4.738869{col 67}{space 3} 4.993888
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat hettest, iid
+{err}hettest not appropriate after robust cluster()
+{txt}{search r(498), local:r(498);}
+
+end of do-file
+
+{search r(498), local:r(498);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat imtest, white
+
+{txt}White's test for Ho: homoskedasticity
+         against Ha: unrestricted heteroskedasticity
+
+{col 10}chi2({res}23{txt}){col 23}= {res}    45.35
+{col 10}{txt}Prob > chi2  = {res}   0.0036
+
+{txt}Cameron & Trivedi's decomposition of IM-test
+
+{hline 21}{c TT}{hline 29}
+{ralign 20:Source} {c |}       chi2     df      p
+{hline 21}{c +}{hline 29}
+{ralign 20:Heteroskedasticity} {c |}{res}      45.35     23    0.0036
+{txt}{ralign 20:Skewness} {c |}{res}      17.25      6    0.0084
+{txt}{ralign 20:Kurtosis} {c |}{res}      12.22      1    0.0005
+{txt}{hline 21}{c +}{hline 29}
+{ralign 20:Total} {c |}{res}      74.82     30    0.0000
+{txt}{hline 21}{c BT}{hline 29}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. ivregress 2sls logwage  exper black south married smsa (educ= nearc4), first 
+{res}
+{txt}First-stage regressions
+{hline 23}
+
+{col 49}Number of obs{col 67}= {res}     3,010
+{txt}{col 49}F({res}   6{txt},{res}   3003{txt}){col 67}= {res}    456.92
+{txt}{col 49}Prob > F{col 67}= {res}    0.0000
+{txt}{col 49}R-squared{col 67}= {res}    0.4772
+{txt}{col 49}Adj R-squared{col 67}= {res}    0.4762
+{txt}{col 49}Root MSE{col 67}= {res}    1.9374
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        educ{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}exper {c |}{col 14}{res}{space 2}-.4025922{col 26}{space 2} .0088709{col 37}{space 1}  -45.38{col 46}{space 3}0.000{col 54}{space 4}-.4199859{col 67}{space 3}-.3851985
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.9527107{col 26}{space 2} .0904035{col 37}{space 1}  -10.54{col 46}{space 3}0.000{col 54}{space 4} -1.12997{col 67}{space 3}-.7754517
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.2957412{col 26}{space 2}  .078969{col 37}{space 1}   -3.75{col 46}{space 3}0.000{col 54}{space 4}  -.45058{col 67}{space 3}-.1409023
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .3232935{col 26}{space 2} .0804645{col 37}{space 1}    4.02{col 46}{space 3}0.000{col 54}{space 4} .1655224{col 67}{space 3} .4810645
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2} .4217282{col 26}{space 2} .0847597{col 37}{space 1}    4.98{col 46}{space 3}0.000{col 54}{space 4} .2555352{col 67}{space 3} .5879212
+{txt}{space 6}nearc4 {c |}{col 14}{res}{space 2}  .332019{col 26}{space 2}  .082293{col 37}{space 1}    4.03{col 46}{space 3}0.000{col 54}{space 4} .1706627{col 67}{space 3} .4933753
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 16.41335{col 26}{space 2} .1279514{col 37}{space 1}  128.28{col 46}{space 3}0.000{col 54}{space 4} 16.16247{col 67}{space 3} 16.66423
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{res}
+{txt}{col 1}Instrumental variables (2SLS) regression{col 51}Number of obs{col 67}= {res}     3,010
+{txt}{col 1}{col 51}Wald chi2({res}6{txt}){col 67}= {res}    819.75
+{txt}{col 1}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}{col 1}{col 51}R-squared{col 67}= {res}    0.2453
+{txt}{col 51}Root MSE{col 67}=    {res} .38549
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .1252938{col 26}{space 2} .0493162{col 37}{space 1}    2.54{col 46}{space 3}0.011{col 54}{space 4} .0286358{col 67}{space 3} .2219518
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0567703{col 26}{space 2} .0199357{col 37}{space 1}    2.85{col 46}{space 3}0.004{col 54}{space 4} .0176972{col 67}{space 3} .0958435
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1138927{col 26}{space 2} .0504188{col 37}{space 1}   -2.26{col 46}{space 3}0.024{col 54}{space 4}-.2127117{col 67}{space 3}-.0150736
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.1134825{col 26}{space 2} .0230642{col 37}{space 1}   -4.92{col 46}{space 3}0.000{col 54}{space 4}-.1586876{col 67}{space 3}-.0682775
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1336709{col 26}{space 2} .0227768{col 37}{space 1}    5.87{col 46}{space 3}0.000{col 54}{space 4} .0890292{col 67}{space 3} .1783125
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2} .1452885{col 26}{space 2} .0307383{col 37}{space 1}    4.73{col 46}{space 3}0.000{col 54}{space 4} .0850425{col 67}{space 3} .2055345
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.970848{col 26}{space 2} .8179334{col 37}{space 1}    4.85{col 46}{space 3}0.000{col 54}{space 4} 2.367728{col 67}{space 3} 5.573968
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 17}Instrumented:{space 2}educ{p_end}
+{p 0 15 17}Instruments:{space 3}exper black south married smsa nearc4{p_end}
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat endogenous //verification endogénéité
+
+{txt}{col 3}Tests of endogeneity
+{col 3}Ho: variables are exogenous
+
+{col 3}Durbin (score) chi2({res}1{txt}){col 35}={res}{col 37} 1.30259{txt}  (p = {res}0.2537{txt})
+{col 3}Wu-Hausman F({res}1{txt},{res}3002{txt}){col 35}={res}{col 37} 1.29969{txt}  (p = {res}0.2544{txt})
+
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat firststage //faiblesse de l'instrument
+{res}
+{txt}{col 3}First-stage regression summary statistics
+{res}{col 3}{text}{hline 13}{c TT}{hline 12}{hline 12}{hline 12}{hline 12}{hline 12}
+{col 16}{c |}{col 29}Adjusted{col 43}Partial
+{col 3}{text}    Variable{col 16}{c |}   R-sq.{col 29}   R-sq.{col 41}    R-sq.{col 53}  F(1,3003){col 65}  Prob > F
+{res}{col 3}{text}{hline 13}{c +}{hline 12}{hline 12}{hline 12}{hline 12}{hline 12}
+{col 3}{text}        educ{col 16}{c |}{result}{space 2}0.4772{col 29}{space 2}0.4762{col 41}{space 3}0.0054{col 53}{space 3}  16.278{col 65}{space 3}0.0001
+{col 3}{text}{hline 13}{c BT}{hline 12}{hline 12}{hline 12}{hline 12}{hline 12}
+
+
+{col 3}Minimum eigenvalue statistic = {res}16.278      
+
+{txt}{col 3}Critical Values{col 40}# of endogenous regressors:{res}    1
+{txt}{col 3}Ho: Instruments are weak{col 40}# of excluded instruments: {res}    1
+{txt}{col 3}{hline 35}{c TT}{hline 33}
+{col 38}{c |}{col 43}5%     10%     20%     30%
+{col 3}2SLS relative bias{col 38}{c |}{col 48}(not available)
+{col 3}{hline 35}{c +}{hline 33}
+{col 38}{c |}{col 42}10%     15%     20%     25%
+{col 3}2SLS Size of nominal 5% Wald test{col 38}{c |}{res}{col 41}16.38{col 49} 8.96{col 57} 6.66{col 65} 5.53
+{txt}{col 3}LIML Size of nominal 5% Wald test{col 38}{c |}{res}{col 41}16.38{col 49} 8.96{col 57} 6.66{col 65} 5.53
+{txt}{col 3}{hline 35}{c BT}{hline 33}
+
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. estat overid //possibilité d'autres intrument
+{err}no overidentifying restrictions
+{txt}{search r(498), local:r(498);}
+
+end of do-file
+
+{search r(498), local:r(498);}
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. 
+. *Exportons les résultats sous format word
+. reg logwage educ exper black south married smsa
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(6, 3003)      = {res}   215.60
+{txt}       Model {c |} {res} 178.427928         6  29.7379881   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 414.213683     3,003  .137933294   {txt}R-squared       ={res}    0.3011
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2997
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .37139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0712755{col 26}{space 2} .0034887{col 37}{space 1}   20.43{col 46}{space 3}0.000{col 54}{space 4}  .064435{col 67}{space 3}  .078116
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0350196{col 26}{space 2} .0022057{col 37}{space 1}   15.88{col 46}{space 3}0.000{col 54}{space 4} .0306948{col 67}{space 3} .0393445
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1654847{col 26}{space 2} .0176472{col 37}{space 1}   -9.38{col 46}{space 3}0.000{col 54}{space 4}-.2000864{col 67}{space 3}-.1308829
+{txt}{space 7}south {c |}{col 14}{res}{space 2} -.132175{col 26}{space 2}  .014997{col 37}{space 1}   -8.81{col 46}{space 3}0.000{col 54}{space 4}-.1615805{col 67}{space 3}-.1027696
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1514184{col 26}{space 2} .0154654{col 37}{space 1}    9.79{col 46}{space 3}0.000{col 54}{space 4} .1210946{col 67}{space 3} .1817421
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2}   .17407{col 26}{space 2} .0154792{col 37}{space 1}   11.25{col 46}{space 3}0.000{col 54}{space 4} .1437191{col 67}{space 3} .2044208
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.866378{col 26}{space 2} .0623323{col 37}{space 1}   78.07{col 46}{space 3}0.000{col 54}{space 4}  4.74416{col 67}{space 3} 4.988597
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. eststo MCO
+{err}command {bf}eststo{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. ssc install estout
+{txt}checking {hilite:estout} consistency and verifying not already installed...
+installing into c:\ado\plus\...
+installation complete.
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. 
+. *Exportons les résultats sous format word
+. reg logwage educ exper black south married smsa
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}     3,010
+{txt}{hline 13}{c +}{hline 34}   F(6, 3003)      = {res}   215.60
+{txt}       Model {c |} {res} 178.427928         6  29.7379881   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} 414.213683     3,003  .137933294   {txt}R-squared       ={res}    0.3011
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.2997
+{txt}       Total {c |} {res} 592.641611     3,009  .196956335   {txt}Root MSE        =   {res} .37139
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .0712755{col 26}{space 2} .0034887{col 37}{space 1}   20.43{col 46}{space 3}0.000{col 54}{space 4}  .064435{col 67}{space 3}  .078116
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0350196{col 26}{space 2} .0022057{col 37}{space 1}   15.88{col 46}{space 3}0.000{col 54}{space 4} .0306948{col 67}{space 3} .0393445
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1654847{col 26}{space 2} .0176472{col 37}{space 1}   -9.38{col 46}{space 3}0.000{col 54}{space 4}-.2000864{col 67}{space 3}-.1308829
+{txt}{space 7}south {c |}{col 14}{res}{space 2} -.132175{col 26}{space 2}  .014997{col 37}{space 1}   -8.81{col 46}{space 3}0.000{col 54}{space 4}-.1615805{col 67}{space 3}-.1027696
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1514184{col 26}{space 2} .0154654{col 37}{space 1}    9.79{col 46}{space 3}0.000{col 54}{space 4} .1210946{col 67}{space 3} .1817421
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2}   .17407{col 26}{space 2} .0154792{col 37}{space 1}   11.25{col 46}{space 3}0.000{col 54}{space 4} .1437191{col 67}{space 3} .2044208
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.866378{col 26}{space 2} .0623323{col 37}{space 1}   78.07{col 46}{space 3}0.000{col 54}{space 4}  4.74416{col 67}{space 3} 4.988597
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. eststo MCO
+{txt}
+{com}. 
+. ivregress 2sls logwage exper black south married smsa (educ= nearc4), first 
+{res}
+{txt}First-stage regressions
+{hline 23}
+
+{col 49}Number of obs{col 67}= {res}     3,010
+{txt}{col 49}F({res}   6{txt},{res}   3003{txt}){col 67}= {res}    456.92
+{txt}{col 49}Prob > F{col 67}= {res}    0.0000
+{txt}{col 49}R-squared{col 67}= {res}    0.4772
+{txt}{col 49}Adj R-squared{col 67}= {res}    0.4762
+{txt}{col 49}Root MSE{col 67}= {res}    1.9374
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}        educ{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}exper {c |}{col 14}{res}{space 2}-.4025922{col 26}{space 2} .0088709{col 37}{space 1}  -45.38{col 46}{space 3}0.000{col 54}{space 4}-.4199859{col 67}{space 3}-.3851985
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.9527107{col 26}{space 2} .0904035{col 37}{space 1}  -10.54{col 46}{space 3}0.000{col 54}{space 4} -1.12997{col 67}{space 3}-.7754517
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.2957412{col 26}{space 2}  .078969{col 37}{space 1}   -3.75{col 46}{space 3}0.000{col 54}{space 4}  -.45058{col 67}{space 3}-.1409023
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .3232935{col 26}{space 2} .0804645{col 37}{space 1}    4.02{col 46}{space 3}0.000{col 54}{space 4} .1655224{col 67}{space 3} .4810645
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2} .4217282{col 26}{space 2} .0847597{col 37}{space 1}    4.98{col 46}{space 3}0.000{col 54}{space 4} .2555352{col 67}{space 3} .5879212
+{txt}{space 6}nearc4 {c |}{col 14}{res}{space 2}  .332019{col 26}{space 2}  .082293{col 37}{space 1}    4.03{col 46}{space 3}0.000{col 54}{space 4} .1706627{col 67}{space 3} .4933753
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 16.41335{col 26}{space 2} .1279514{col 37}{space 1}  128.28{col 46}{space 3}0.000{col 54}{space 4} 16.16247{col 67}{space 3} 16.66423
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{res}
+{txt}{col 1}Instrumental variables (2SLS) regression{col 51}Number of obs{col 67}= {res}     3,010
+{txt}{col 1}{col 51}Wald chi2({res}6{txt}){col 67}= {res}    819.75
+{txt}{col 1}{col 51}Prob > chi2{col 67}= {res}    0.0000
+{txt}{col 1}{col 51}R-squared{col 67}= {res}    0.2453
+{txt}{col 51}Root MSE{col 67}=    {res} .38549
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}     logwage{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      z{col 46}   P>|z|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 8}educ {c |}{col 14}{res}{space 2} .1252938{col 26}{space 2} .0493162{col 37}{space 1}    2.54{col 46}{space 3}0.011{col 54}{space 4} .0286358{col 67}{space 3} .2219518
+{txt}{space 7}exper {c |}{col 14}{res}{space 2} .0567703{col 26}{space 2} .0199357{col 37}{space 1}    2.85{col 46}{space 3}0.004{col 54}{space 4} .0176972{col 67}{space 3} .0958435
+{txt}{space 7}black {c |}{col 14}{res}{space 2}-.1138927{col 26}{space 2} .0504188{col 37}{space 1}   -2.26{col 46}{space 3}0.024{col 54}{space 4}-.2127117{col 67}{space 3}-.0150736
+{txt}{space 7}south {c |}{col 14}{res}{space 2}-.1134825{col 26}{space 2} .0230642{col 37}{space 1}   -4.92{col 46}{space 3}0.000{col 54}{space 4}-.1586876{col 67}{space 3}-.0682775
+{txt}{space 5}married {c |}{col 14}{res}{space 2} .1336709{col 26}{space 2} .0227768{col 37}{space 1}    5.87{col 46}{space 3}0.000{col 54}{space 4} .0890292{col 67}{space 3} .1783125
+{txt}{space 8}smsa {c |}{col 14}{res}{space 2} .1452885{col 26}{space 2} .0307383{col 37}{space 1}    4.73{col 46}{space 3}0.000{col 54}{space 4} .0850425{col 67}{space 3} .2055345
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.970848{col 26}{space 2} .8179334{col 37}{space 1}    4.85{col 46}{space 3}0.000{col 54}{space 4} 2.367728{col 67}{space 3} 5.573968
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{p 0 15 17}Instrumented:{space 2}educ{p_end}
+{p 0 15 17}Instruments:{space 3}exper black south married smsa nearc4{p_end}
+
+{com}. eststo DMC
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. outreg2  [MCO DMC] using table2.doc, title("Effet de l'éducation sur les salaires") bdec(3) sdec(3) replace
+{err}command {bf}outreg2{sf} is unrecognized
+{txt}{search r(199), local:r(199);}
+
+end of do-file
+
+{search r(199), local:r(199);}
+
+{com}. ssc install outreg2
+{txt}checking {hilite:outreg2} consistency and verifying not already installed...
+installing into c:\ado\plus\...
+installation complete.
+
+{com}. do "C:\Users\gwari\AppData\Local\Temp\STD3098_000000.tmp"
+{txt}
+{com}. outreg2  [MCO DMC] using table2.doc, title("Effet de l'éducation sur les salaires") bdec(3) sdec(3) replace
+{txt}c:\ado\plus/o/outreg2.ado
+{stata `"shellout using `"table2.doc"'"':table2.doc}
+{browse `"D:\MES CERTIFICATIONS\stata\variable_intrumentale"' :dir}{com} : {txt}{stata `"seeout using "table2.txt""':seeout}
+
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear
